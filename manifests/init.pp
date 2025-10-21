@@ -180,57 +180,6 @@ class vsftpd (
   else {
     $secure_chroot_dir_real = $secure_chroot_dir
   }
-  if $ftpd_banner != undef {
-    validate_string($ftpd_banner)
-  }
-  if $hide_file != undef {
-    validate_string($hide_file)
-  }
-  if $banner_file != undef {
-    validate_string($banner_file)
-  }
-  if $anon_root != undef {
-    validate_string($anon_root)
-  }
-  if $cmds_allowed != undef {
-    validate_string($cmds_allowed)
-  }
-  if $deny_file != undef {
-    validate_string($deny_file)
-  }
-  if $dsa_cert_file != undef {
-    validate_string($dsa_cert_file)
-  }
-  if $dsa_private_key_file != undef {
-    validate_string($dsa_private_key_file)
-  }
-  if $listen_address != undef {
-    validate_string($listen_address)
-  }
-  if $listen_address6 != undef {
-    validate_string($listen_address6)
-  }
-  if $local_root != undef {
-    validate_string($local_root)
-  }
-  if $pasv_address != undef {
-    validate_string($pasv_address)
-  }
-  if $rsa_private_key_file != undef {
-    validate_string($rsa_private_key_file)
-  }
-  if $user_config_dir != undef {
-    validate_string($user_config_dir)
-  }
-  if $user_sub_token != undef {
-    validate_string($user_sub_token)
-  }
-
-
-  validate_string($package_name)
-  validate_string($package_ensure)
-  validate_string($service_name)
-  validate_string($template)
   validate_re($local_umask, '^[0-7]{3}$',
     "vsftpd::local_umask is <${local_umask}> and must be a valid three digit mode in octal notation."
   )

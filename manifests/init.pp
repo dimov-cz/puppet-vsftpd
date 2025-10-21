@@ -144,7 +144,7 @@ class vsftpd (
   $directives                = {},
 ) {
 
-  case $::operatingsystem {
+  case $facts['os']['name'] {
     'RedHat',
     'CentOS',
     'Amazon': {
@@ -162,7 +162,7 @@ class vsftpd (
   # Validate all the parameters!
 
   if $secure_chroot_dir == undef {
-    case $::operatingsystem {
+    case $facts['os']['name'] {
       'RedHat',
       'CentOS',
       'Amazon': {

@@ -65,7 +65,7 @@ class vsftpd (
   $anonymous_enable          =  'YES',
   $listen                    =  'YES',
   $anon_world_readable_only  =  'YES',
-  $background                =  'YES',
+  $background                =  'NO',  # NO for systemd compatibility
   $port_enable               =  'YES',
   $check_shell               =  'YES',
   $chmod_enable              =  'YES',
